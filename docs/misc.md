@@ -42,7 +42,7 @@ $ monkey sync_networks -b an-s3-bucket -f networks.json
 # in addition to the above, delete any networks not specified in networks.json
 $ monkey sync_networks -b an-s3-bucket -f networks.json -a
 # or just use a local file
-$ monkey sync_networks -f ~/networks.json
+$ monkey sync_networks -i ~/networks.json
 ```
 
 This JSON file should map between names and CIDRs like so:
