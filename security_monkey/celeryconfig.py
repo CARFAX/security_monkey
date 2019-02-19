@@ -11,7 +11,8 @@ import os
 # CHANGE THE VALUES BELOW THIS LINE AS APPROPRIATE:
 # Broker source: Place yours here:
 
-broker_url = 'redis://{}/{}'.format(
+broker_url = '{}://{}/{}'.format(
+    os.getenv('SECURITY_MONKEY_REDIS_PROTOCOL', 'redis'),
     os.getenv('SECURITY_MONKEY_REDIS_HOST', 'localhost'),
     os.getenv('SECURITY_MONKEY_REDIS_DB', '0')
 )
