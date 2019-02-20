@@ -39,6 +39,11 @@ broker_url = 'redis://<COPY-THE-ENDPOINT-PATH-HERE>'
 
 After you make the changes to your Celery configuration, re-deploy Security Monkey.
 
+SSL Redis
+--------------
+If using SSL Redis change redis://<ENDPOINT> to be rediss://<ENDPOINT>
+When using docker, you can add to the secmonkey.env file SECURITY_MONKEY_REDIS_PROTOCOL=rediss
+
 Troubleshooting
 --------------
 If the security monkey scheduler and workers hang on start-up, it's likely the security groups are incorrectly configured.
